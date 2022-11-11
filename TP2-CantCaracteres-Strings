@@ -1,0 +1,32 @@
+#include <stdio.h>
+#define LIM_STRING 100
+int c=1;
+
+void func(void);
+
+int main(void)
+{
+  printf("Bienvenido al programa\n");
+  while(c==1)
+  {
+    printf("Ingrese una palabra\n");
+    func();
+    printf("Quiere seguir usando el programa? Ingrese 1 para continuar, 0 para salir\n");
+    scanf("%d", &c);
+    while ((c!=1 && c!=0))
+    {
+      printf("Ingrese un valor correcto\n");
+      scanf("%d",&c);
+    }
+  }
+  return 0;
+}
+
+void func(void)
+{
+  short int x;
+  char palabra[LIM_STRING];
+  scanf("%s", palabra);
+  for(x=0;palabra[x]&&x<=LIM_STRING;x++);
+  printf("La cantidad de caractéres es %d\n", x);
+}
