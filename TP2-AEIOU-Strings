@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int func (void);
+
+int main(void) {
+  printf("Ingrese 20 caracteres\n");
+  func ();
+  
+  return 0;
+}
+
+int func (void)
+{
+  char pal[20];
+  int x, a=0, e=0, i=0, o=0, u=0;
+  for(x=0;x<21;x++)
+  {
+    scanf("%c", &pal[x]);
+    /*printf("%c", pal[x]);*/
+    if (pal[x]=='a') a++;
+    if (pal[x]=='e') e++;
+    if (pal[x]=='i') i++;
+    if (pal[x]=='o') o++;
+    if (pal[x]=='u') u++;
+  }
+  printf("La palabra posee ");
+  printf("%d a, %d e, %d i, %d o y %d u", a, e, i, o, u);
+}
