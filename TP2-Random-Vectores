@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define max_vector 10
+int c;
+void randomizer (void);
+
+int main(void) {
+  printf("Bienvenido al programa\n");
+  randomizer();
+  return 0;
+}
+
+void randomizer (void){
+  int max, min, numero, x;
+  printf("Ingrese el valor máximo:\n");
+  scanf("%d", &max);
+  printf("Ingrese el valor mínimo:\n");
+  scanf("%d", &min);
+  printf("Los valores son:\n");
+  for(x=0;x<=max_vector;x++){
+    numero = rand () % max + min;
+    printf("%d\n", numero);
+  }
+}
