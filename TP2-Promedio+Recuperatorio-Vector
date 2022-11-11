@@ -1,0 +1,27 @@
+#include <stdio.h>
+float notas[20];
+int funcdesaprobados(void);
+
+int main(void) {
+  funcdesaprobados();
+  return 0;
+}
+
+int funcdesaprobados(void){
+  printf("Ingrese los 20 valores\n");
+  int cantidad;
+  int desaprobados = 0;
+  float suma = 0;
+  for(cantidad=1; cantidad<=20; cantidad++){
+    printf("Ingrese la siguiente nota\n");
+    scanf("%f", &notas[cantidad]);
+    suma= notas[cantidad]+suma;
+    if (notas[cantidad]<7){
+      desaprobados++;
+    }
+  }
+  float promedio = suma / (cantidad-1);
+  printf("El promedio es %.2f\n", promedio);
+  printf("Hay %d estudiantes desaprobados\n", desaprobados);
+  return 0;
+}
